@@ -1,0 +1,98 @@
+@charset "UTF-8";
+body {
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+}
+.container {
+    position: relative;
+}
+.head-line {
+    margin-top: 1em;
+    display: flex; /* .head-line의 자식 요소를 가운데 정렬 함 => sgv 가운데 정렬시킴*/
+    justify-content: center;
+}
+.head-line svg {
+    max-width: 430px;
+}
+/* menu */
+.menus {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double #000;
+    flex-wrap: wrap;
+}
+.menus button {
+    border: none;
+    background: none;
+    color: #000;
+    margin: 5px;
+}
+.menus button:hover {
+    background-color: beige;
+    border-radius: 5px;
+}
+.news-img-size {
+    /* img에 100%를 주면 부모의 영역으로부터 100% -> colum의 크기만큼 차지 */
+    max-width: 100%;
+    max-height: 250px;
+}
+.news {
+    padding: 1em;
+    border-bottom: 2px solid #000;
+}
+/* search */
+.search_box {
+    position: absolute;
+    margin: 0 auto;
+    top: 10px;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.search_box:hover > #search-input {
+    width: 200px;
+    padding: 0 6px;
+}
+.search_box:hover > #search-button {
+    background: white;
+    color: #2f3640;
+}
+#search-button {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+#search-input {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+/* pagenation */
+.pagination {
+    justify-content: center;
+    margin-top: 15px;
+}
+.title {
+    font-size: 30px;
+}

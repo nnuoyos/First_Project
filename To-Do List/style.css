@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* @font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-image: url(./img/photo-1559583985-c80d8ad9b29f.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-family: 'BinggraeSamanco-Bold'; */
+    font-family: 'yg-jalnan';
+    font-size: 20px;
+}
+.container {
+    background-color: #fff;
+    min-height: 100vh;
+    /* vh : 화면 가득 채우기 */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.container > h1 {
+    text-align: center;
+}
+/* tab */
+.task-tabs {
+    display: flex;
+}
+.task-tabs div {
+    padding: 1em;
+}
+.task-area {
+    border: 1px solid lightblue;
+}
+.task-tabs {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid lightblue;
+}
+.task-tabs div {
+    padding: 1em;
+}
+#under-line {
+    height: 4px;
+    background-color: cornflowerblue;
+    position: absolute;
+    width: 50px;
+    left: 0;
+    top: 52px;
+    padding: 0;
+}
+/* task */
+.task {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.task-done {
+    text-decoration: line-through;
+    background-color: rgba(211, 211, 211, 0.5);
+    color: dimgrey;
+    transition: 1s;
+}
+.button-box {
+    display: flex;
+}
+.task-tabs > div {
+    cursor: pointer;
+}
+/* check, delete btn */
+button {
+    height: 100%;
+    border: 1px solid #232323;
+    width: 2em;
+    margin: 0;
+    background-color: #fff;
+    font-size: 15px;
+}
+.button-box button {
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: #fff;
+    transition: 1s;
+    font-size: 19px;
+}
+/* btn hover */
+.button-box button:first-child:hover {
+    background-color: rgb(127, 255, 0, 0.6);
+}
+.button-box button:nth-child(2):hover {
+    background-color: rgb(225, 0, 0, 0.3);
+}
+/* check icon */
+.fa-circle-check {
+    color: rgb(60, 219, 68);
+}
+/* delete icon */
+.fa-delete-left {
+    color: rgb(202, 52, 52);
+}
+/* rotate icon */
+.fa-arrow-rotate-left {
+    color: darkgray;
+}
+
+.task span {
+    padding: 1em;
+}
+/* input */
+.input-area {
+    margin-bottom: 10px;
+}
+input {
+    width: 90%;
+    height: 35px;
+    font-size: 18px;
+    border: 0.5px solid lightblue;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: #fff;
+}
+/* plus+ btn */
+.fa-circle-plus {
+    color: limegreen;
+}
+#add-button {
+    border: none;
+    /* border-radius: 15px; */
+    outline: none;
+    font-size: 20px;
+}
