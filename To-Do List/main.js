@@ -18,7 +18,6 @@ let taskList = []; //입력 받은 값을 차례로 배열에 넣을 예정
 let filterList = [];
 let tabs = document.querySelectorAll('.task-tabs div');
 let mode = 'all'; //디폴트 값을 all로 해서 할일 추가버튼 누를때마다 바로바로 all창에 보인다
-
 console.log(tabs);
 
 /* +버튼이 클릭 되었을 때 실행할 함수 */
@@ -37,7 +36,6 @@ for (let i = 1; i < tabs.length; i++) {
         filter(event);
     });
 }
-
 function addTask() {
     //객체에 있는 정보가 완료인지 진행중인지에 대한 정보 필요
     let taskValue = taskInput.value;
@@ -55,7 +53,6 @@ function addTask() {
     taskInput.value = ''; //입력 후 입력창 비우기
     render();
 }
-
 //taskList를 화면상에 나타나도록 하기
 //taskList[i]의 taskContent 객체 가져오기
 //${taskList[i].id} 체크버튼이 눌러질때마다 id값이 인자로 들어온다
@@ -73,7 +70,7 @@ function render() {
         <span>${list[i].taskContent}</span>
         <div class="button-box">
             <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-            <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
         </div>`;
         } else {
@@ -81,7 +78,7 @@ function render() {
         <span>${list[i].taskContent}</span>
         <div class="button-box">
             <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-circle-check"></i></button>
-            <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-circle-xmark"></i></i></button>
         </div>
         </div>`;
         }
@@ -159,15 +156,7 @@ function filter(event) {
     render();
     //console.log(filterList);
 }
-
 function randomIDGenerate() {
     return Math.random().toString(36).substr(2, 16);
 }
 
-/* 
-추가 작업
-1. 아이콘 넣기:: 체크버튼<->리프레쉬 버튼 / 삭제버튼 //완료
-2. 입력창에 엔터값으로 할 일 추가할 수 있도록 하기 (커서올리면 전에 쓴 글 지우기 포함) //완료
-3. 진행중,끝남 탭에서 체크버튼,딜리트버튼 눌렀을 때 UI(화면상)에 바로 업데이트 시키기
-
-*/
